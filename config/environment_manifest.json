@@ -1,0 +1,19 @@
+{
+  "project_name": "OULAD HCAI Analytics Pipeline",
+  "academic_supervisor": "Professor Solomon Sunday Oyelere",
+  "cloud_platform": "Microsoft Azure Fabric",
+  "workspace_name": "OULAD_DENG_HCAI_RESEARCH",
+  "architecture_pattern": "Medallion Lakehouse Layers",
+  "environments": {
+    "bronze_layer": {
+      "name": "OULAD_DENG_Bronze_Raw",
+      "purpose": "Immutable landing zone for raw multi-table OULAD CSV files",
+      "access_control": "Restricted to Data Engineering automated service principals"
+    },
+    "silver_layer": {
+      "name": "OULAD_DENG_Silver_Audited",
+      "purpose": "Hashed, anonymised, and Fairlearn-vetted Delta tables",
+      "governance_approval": "Professor Solomon Sunday Oyelere"
+    }
+  }
+}
