@@ -1,4 +1,4 @@
-# Human-Centred AI (HCAI) Data Pipeline
+# Data Engineering for Human-Centred AI Research
 ## Architecture Pack | Version 1.0 (Azure Fabric & OULAD)
 
 **Academic Supervisor:** Professor Solomon Sunday Oyelere  
