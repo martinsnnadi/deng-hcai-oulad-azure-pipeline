@@ -27,23 +27,22 @@ My technical, ethical, and research objectives for this 24-week academic supervi
 
 ### 2.1 Confirmed Environment Status
 *   **Version Control Workspace:** Active public GitHub cloud repository (`hcai-oulad-azure-pipeline`) fully initialized with explicit directory routing (`architecture/`, `notebooks/`, `config/`).
-*   **Cloud Processing Workspace:** Microsoft Azure Fabric corporate workspace `OULAD_HCAI_Analytics` established.
+*   **Cloud Processing Workspace:** Microsoft Azure Fabric corporate workspace `OULAD_DENG_HCAI_Analytics` established.
 *   **Storage Framework:** Complete 3-tier Medallion architecture successfully provisioned as decoupled infrastructure points:
-    1. `OULAD_Bronze_Raw` (Immutable append-only landing zone for education CSV tables).
-    2. `OULAD_Silver_Audited` (Anonymised, joined, and fairness-vetted Delta tables).
-    3. `OULAD_Gold_Curated` (Aggregated, semantic student feature matrices optimized for unbiased Power BI reporting and AI consumption).
+    1. `OULAD_DENG_Bronze_Raw` (Immutable append-only landing zone for education CSV tables).
+    2. `OULAD_DENG_Silver_Audited` (Anonymised, joined, and fairness-vetted Delta tables).
+    3. `OULAD_DENG_Gold_Curated` (Aggregated, semantic student feature matrices optimized for unbiased Power BI reporting and AI consumption).
 
 ### 2.2 Active Access Issues & Blockers Ledger
 *   *Issue 1 (Fabric Capacity Migration):* Direct PySpark notebook compute allocation is running on a temporary cloud trial tier. We must schedule a migration roadmap to a stable research capacity before the 60-day trial window expires to maintain runtime integrity.
-*   *Issue 2 (Granular Role Scoping Policies):* While workspace Access Control Lists (ACLs) successfully add Professor Oyelere with remote validation visibility, explicit Column-Level Security (CLS) and Row-Level Security (RLS) rules need to be written to prevent downstream analytics from accessing raw sensitive fields before anonymisation.
+*   *Issue 2 (Cross-Organisational Access Blocker):* Microsoft Azure Fabric tenant policies currently block external domain invitations. Because Professor Oyelere is an external collaborator, the platform prevents adding his institutional account directly to the workspace Access Control List (ACL) as a Viewer. 
 
 ---
 
-## 3. Supervision Agenda Questions (For Professor Oyelere)
+## 3. Supervision Agenda Question (For Professor Oyelere)
 
-The following structured questions have been prepared to guide our next active supervision session as we officially transition from the design phase to Week 5 data ingestion:
+To ensure our cloud storage schemas are correctly configured before we begin active data ingestion in Week 5, I have narrowed our design focus down to one foundational question regarding student privacy:
 
-1.  **Bias Threshold Thresholds:** In our design architecture pack, I implemented a baseline 15% discrepancy limit on the Demographic Parity Difference for the `disability` and `age_band` attributes. Does this specific margin align with your learning analytics research benchmarks, or should the gatekeeper threshold be tightened?
-2.  **Temporal Privacy Granularity:** The OULAD click logs track granular, daily student interaction timestamps. To lower individual behavior tracking vulnerabilities, do you recommend aggregating these log counts into uniform weekly modules, or should we retain daily intervals for specific feature distributions?
-3.  **Gold Layer Semantic Intention:** To help me design the final tables inside `OULAD_Gold_Curated`, is the target consuming machine learning model intended for classification tasks (predicting immediate student dropout risk) or will we need to design features that support unsupervised clustering for behavioral student profiling?
-4.  **Provenance Metadata Architecture:** For our Code-to-Data alignment strategy, do you prefer the pipeline to inject the raw GitHub commit hash string directly into the schema metadata columns, or should we maintain a standalone markdown compliance registry file inside the repository root?
+1. **Clickstream Privacy Granularity**: The raw OULAD data tracks highly specific, daily student click interactions. To protect student identities and prevent vulnerabilities related to individual behaviour tracking, do you prefer that our pipeline aggregate these logs into uniform weekly totals during processing, or should we ingest the raw daily intervals exactly as they are?
+
+
