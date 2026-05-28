@@ -1,9 +1,7 @@
-<!--
 # Human-Centred AI Data Governance Framework
 **Project:** Data Engineering for Human-centred AI Research  
 **Academic Supervisor:** Professor Solomon Sunday Oyelere  
-**Framework Status:** Active (Initialised Week 5)
-
+**Framework Status:** Active
 ---
 
 ## 1. Provenance & Lineage Strategy
@@ -25,8 +23,8 @@ Data state drift is handled through **Delta Lake storage formats** inside Azure 
 
 ## 3. Reproducibility Parameters
 To ensure research validity and pipeline replication:
-* **Deterministic Hashing**: Cryptographic anonymisation scripts utilize a static, repository-secured salt key to guarantee that a student ID translates to the exact same surrogate key across all relational table joins.
-* **Schema Enforcement**: Silver and Gold layers utilize strict schema locking to throw critical processing exceptions if data drift or corrupted column structures are detected during runtime.
+* **Deterministic Hashing**: Cryptographic anonymisation scripts utilise a static, repository-secured salt key to guarantee that a student ID translates to the exact same surrogate key across all relational table joins.
+* **Schema Enforcement**: Silver and Gold layers utilise strict schema locking to throw critical processing exceptions if data drift or corrupted column structures are detected during runtime.
 
 ---
 
@@ -37,6 +35,5 @@ To ensure research validity and pipeline replication:
 ---
 
 ## 5. Documentation Lifecycle
-* **Live Cataloging**: A central repository data dictionary acts as the single source of truth for attribute meanings, data types, and equity tracking categories.
+* **Live Cataloguing**: A central repository data dictionary acts as the single source of truth for attribute meanings, data types, and equity tracking categories.
 * **Pipeline Audit Trails**: All programmatic pipeline halts caused by demographic underrepresentation or severe bias variance trigger automated log notifications to the `Supervisor_Review_Audit_Log`.
--->
