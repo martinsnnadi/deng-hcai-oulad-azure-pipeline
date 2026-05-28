@@ -1,4 +1,3 @@
-<!--
 # Internship Milestone: Weeks 1–4 Scoping & Design Sign-off
 **Project Title:** Data Engineering for Human-centred AI Research  
 **Intern:** Martins Ifeanyi Nnadi  
@@ -9,7 +8,7 @@
 
 ## 1. Personal Development Goals Note (One-Page Summary)
 
-My technical, ethical, and research objectives for this 24-week academic supervision internship are structured around my existing multi-cloud skillset—bridging my Microsoft Fabric Data Engineer Associate (DP-600) certification, AWS/Snowflake bootcamp tracks, and Human-Centered AI (HCAI) engineering:
+My technical, ethical, and research objectives for this 24-week academic supervision internship are structured around my existing multi-cloud skillset—bridging my Microsoft Fabric Data Engineer Associate (DP-600) certification, AWS/Snowflake bootcamp tracks, and Human-Centred AI (HCAI) engineering:
 
 *   **Goal 1: Advanced Medallion Architecture Implementation (Technical)**
     *   *Objective:* Design and provision fully segregated Bronze, Silver, and Gold lakehouse environments within the Azure Fabric workspace to isolate raw, unvetted education datasets from downstream machine learning consumers.
@@ -48,4 +47,3 @@ The following structured questions have been prepared to guide our next active s
 2.  **Temporal Privacy Granularity:** The OULAD click logs track granular, daily student interaction timestamps. To lower individual behavior tracking vulnerabilities, do you recommend aggregating these log counts into uniform weekly modules, or should we retain daily intervals for specific feature distributions?
 3.  **Gold Layer Semantic Intention:** To help me design the final tables inside `OULAD_Gold_Curated`, is the target consuming machine learning model intended for classification tasks (predicting immediate student dropout risk) or will we need to design features that support unsupervised clustering for behavioral student profiling?
 4.  **Provenance Metadata Architecture:** For our Code-to-Data alignment strategy, do you prefer the pipeline to inject the raw GitHub commit hash string directly into the schema metadata columns, or should we maintain a standalone markdown compliance registry file inside the repository root?
--->
